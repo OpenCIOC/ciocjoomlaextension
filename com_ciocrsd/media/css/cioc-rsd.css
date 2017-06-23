@@ -1,0 +1,185 @@
+.ciocrsd-alert, .ciocrsd-success {
+	padding: 2px 5px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+
+.ciocrsd-alert {
+	background-color: #f2dede;
+	border-color: #ebccd1;
+	color: #a94442;
+}
+
+.ciocrsd-success {
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+	color: #3c763d;
+}
+
+div.ciocrsd-alert, div.ciocrsd-success {
+	padding: 5px 10px;
+	margin-top: .25em;
+	margin-bottom: 1em;;	
+}
+
+div.ciocrsd-record-detail >  h3.ciocrsd-field-group {
+	margin-top: 1.5em;
+	margin-bottom: .75em;
+	padding-top: .25em;
+	border-top: thin solid #ccc;
+}
+
+.ciocrsd-field-group-row {
+	margin-bottom: .75em;
+	clear: both;
+}
+
+.ciocrsd-field-label {
+	font-weight: bold;
+}
+
+.ciocrsd-record-detail .ciocrsd-field-label {
+	font-size: 120%;	
+}
+
+.ciocrsd-search-result .ciocrsd-field-label {
+	font-size: 115%;	
+}
+
+.ciocrsd-field-label .fa, .ciocrsd-field-label .glyphicon, .ciocrsd-quicklist-browse .fa, .ciocrsd-quicklist-browse .glyphicon {
+	min-width: 1.5em;
+	text-align: center;
+	padding-right: .25em;
+}
+
+.ciocrsd-record-detail .ciocrsd-field-label .fa, .ciocrsd-record-detail .ciocrsd-field-label .glyphicon {
+	font-size: 125%;	
+}
+
+.ciocrsd-field-content_full {
+
+}
+
+.address-mapped {
+	float: left;
+}
+
+.atgoeshere::before {
+	content: "@";
+}
+
+.ciocrsd-record-detail {
+	padding-bottom: .75em;
+	margin-bottom: 2em;
+	border-bottom: thin solid #ddd;
+}
+
+.ciocrsd-record-detail > h2.ciocrsd-org-name {
+	margin-bottom: .75em;
+}
+
+.ciocrsd-record-detail > h3.ciocrsd-org-name {
+	margin-top: .75em;
+	margin-bottom: .75em;
+}
+
+.ciocrsd-record-detail .recordLogo, .ciocrsd-search-result .recordLogo {
+	max-height: 130px;
+}
+
+.ciocrsd-record-detail .ciocrsd-field-content {
+	padding-left: 2.6em;
+}
+
+.ciocrsd-search-result .ciocrsd-field-content {
+	padding-left: 2.1em;
+}
+
+.ciocrsd-search-form {
+	margin-bottom: 1em;
+}
+
+.ciocrsd-search-results > .ciocrsd-search-result > h2.ciocrsd-org-name {
+	margin-top: .5em;
+	margin-bottom: .75em;
+	font-size: large;
+}
+
+.ciocrsd-search-result {
+	margin-top: 1.5em;
+	border-top: thin solid #ddd;
+}
+
+.ciocrsd-search-buttons {
+	margin-top: .25em;
+	margin-bottom: .25em;
+}
+
+input.form-control, select.form-control {
+	width: 100%;
+	height: 2.5em;
+	line-height: 1.35;
+	padding: 6px 12px;
+	background-color: #fff;
+}
+
+.ciocrsd-form-input {
+	margin-bottom: .5em;	
+}
+
+.ciocrsd-logo-container {
+	display: block;
+	float: right;
+}
+
+.ciocrsd-search-result .ciocrsd-logo-container {
+	padding: .75em 0 .75em 1em;
+}
+
+.ciocrsd-record-detail .ciocrsd-logo-container {
+	padding: 0 0 .75em 1em;
+}
+
+div.DetailsMapCanvas {
+	width: 330px;
+	min-width: 50%;
+	height: 175px;
+	float: right;
+}
+
+.ciocrsd-quicklist-browse {
+	vertical-align: middle;
+}
+
+.ciocrsd-quicklist-browse li {
+	margin-bottom: .5em;
+	list-style-type: none;
+}
+
+.ciocrsd-quicklist-browse a {
+	font-size: 120%;
+}
+
+.ciocrsd-count-bubble {
+	display: inline-block;
+	margin: 0 .25em;
+	padding: 0 .5em;
+	border: thin solid #ddd;
+	border-radius: 10px;
+}
+
+@media (max-width: 767px) {
+	.ciocrsd-logo-container {
+		display: none;
+	}
+	div.DetailsMapCanvas {
+		float: none;
+		width: 100%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+}
+.fa[class^="icon-"]:before, .fa[class*=" icon-"]:before {
+    font-family: "fontello";
+}

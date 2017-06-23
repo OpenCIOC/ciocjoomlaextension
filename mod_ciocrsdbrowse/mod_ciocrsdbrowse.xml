@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>COM_CIOCRSD_BROWSE</name>
+    <author>Open CIOC Project</author>
+    <version>0.1.1</version>
+    <description>COM_CIOCRSD_XML_DESCRIPTION</description>
+    <files>
+        <filename>mod_ciocrsdbrowse.xml</filename>
+        <filename module="mod_ciocrsdbrowse">mod_ciocrsdbrowse.php</filename>
+        <filename>index.html</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+        <folder>language</folder>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="targetmenuitem" required="true" type="menuitem" label="Select a menu item" description="Select a menu item" />
+		<field name="ciocrsd_browse_quicklist" type="text"
+				default="DEFAULT"
+				label="COM_CIOCRSD_FIELD_QUICKLIST"
+				description="COM_CIOCRSD_FIELD_QUICKLIST_DESC"
+				required="true"
+				size="20" maxlength="20"
+		/>
+		<field name="ciocrsd_browse_ciocresults" type="radio"
+			default=""
+			class="btn-group btn-group-yesno"
+			label="COM_CIOCRSD_FIELD_CIOCRESULTS"
+		>
+			<option value="on">JYES</option>
+			<option value="">JNO</option>
+		</field>
+		<field name="ciocrsd_browse_count" type="radio"
+			default="on"
+			class="btn-group btn-group-yesno"
+			label="COM_CIOCRSD_FIELD_COUNT"
+		>
+			<option value="on">JYES</option>
+			<option value="off">JNO</option>
+		</field>
+
+            </fieldset>
+        </fields> 
+</config>
+</extension>

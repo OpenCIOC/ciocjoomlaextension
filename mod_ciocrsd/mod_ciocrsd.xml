@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>COM_CIOCRSD</name>
+    <author>Open CIOC Project</author>
+    <version>0.1.1</version>
+    <description>COM_CIOCRSD_XML_DESCRIPTION</description>
+    <files>
+        <filename>mod_ciocrsd.xml</filename>
+        <filename module="mod_ciocrsd">mod_ciocrsd.php</filename>
+        <filename>index.html</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+        <folder>language</folder>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="targetmenuitem" required="true" type="menuitem" label="Select a menu item" description="Select a menu item" />
+			<field name="ciocrsd_search_ciocresults" type="radio"
+				default=""
+				class="btn-group btn-group-yesno"
+				label="COM_CIOCRSD_FIELD_CIOCRESULTS"
+			>
+				<option value="on">JYES</option>
+				<option value="">JNO</option>
+			</field>
+			<field name="ciocrsd_search_keywords" type="radio"
+				default="on"
+				class="btn-group btn-group-yesno"
+				label="COM_CIOCRSD_FIELD_KEYWORDS"
+			>
+				<option value="on">JYES</option>
+				<option value="off">JNO</option>
+			</field>
+			<field name="ciocrsd_search_agegroup" type="radio"
+				default=""
+				class="btn-group btn-group-yesno"
+				label="COM_CIOCRSD_FIELD_AGEGROUP"
+			>
+				<option value="on">JYES</option>
+				<option value="">JNO</option>
+			</field>
+			<field name="ciocrsd_search_quicklist" type="text"
+					default=""
+					label="COM_CIOCRSD_FIELD_QUICKLIST"
+					description="COM_CIOCRSD_FIELD_QUICKLIST_DESC"
+					size="20" maxlength="20"
+			/>
+
+			<field name="ciocrsd_search_community" type="radio"
+				default="on"
+				class="btn-group btn-group-yesno"
+				label="COM_CIOCRSD_FIELD_COMMUNITY"
+			>
+				<option value="on">JYES</option>
+				<option value="off">JNO</option>
+			</field>
+			<field name="ciocrsd_search_limitcmtype" type="radio"
+				default="S"
+				class="btn-group"
+				label="COM_CIOCRSD_FIELD_LIMITCMTYPE"
+			>
+				<option value="L">COM_CIOCRSD_LOCATED_IN_COMMUNITY</option>
+				<option value="S">COM_CIOCRSD_SERVING_COMMUNITY</option>
+			</field>
+			<field name="ciocrsd_search_clearbutton" type="radio"
+				default="on"
+				class="btn-group btn-group-yesno"
+				label="COM_CIOCRSD_FIELD_CLEARBUTTON"
+			>
+				<option value="on">JYES</option>
+				<option value="off">JNO</option>
+			</field>
+			<field name="ciocrsd_search_multiformid" type="text"
+				default=""
+				label="COM_CIOCRSD_FIELD_MULTIFORMID"
+				description="COM_CIOCRSD_FIELD_MULTIFORMID_DESC"
+				size="5"
+				maxlength="5" />
+            </fieldset>
+        </fields> 
+</config>
+</extension>

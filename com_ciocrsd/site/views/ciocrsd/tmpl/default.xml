@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_CIOCRSD_CIOCRSD_VIEW_DEFAULT_TITLE" option="COM_CIOCRSD_CIOCRSD_VIEW_DEFAULT_OPTION">
+		<!--
+		<help
+			key="JHELP_MENUS_MENU_ITEM_CIOCRSD"
+		/>
+		-->
+		<message>
+			<![CDATA[COM_CIOCRSD_CIOCRSD_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+
+	<!-- Add fields to the parameters object for the layout. -->
+		<fields name="params">
+		<fieldset name="request" label="COM_CIOCRSD_VIEW_AND_LANGUAGE">
+			<field name="ciocrsd_viewtype" type="text"
+				label="COM_CIOCRSD_FIELD_VIEWTYPE"
+				size="5"
+				maxlength="10"
+				/>
+			<!-- NOTE should this come from joomla? -->
+			<field name="ciocrsd_ln" type="text"
+				label="COM_CIOCRSD_FIELD_LANGUAGE"
+				size="5"
+				maxlength="5"
+				/>
+		<!--
+			<field name="ciocrsd_domain"
+				type="radio"
+				class="btn-group"
+				default="cic"
+				label="COM_CIOCRSD_FIELD_CIOC_DOMAIN"
+			>
+				<option value="cic">COM_CIOCRSD_CIC_DOMAIN</option>
+				<option value="vol">COM_CIOCRSD_VOL_DOMAIN</option>
+			</field>
+		-->
+			<field name="ciocrsd_search_or_browse" type="radio"
+				label="COM_CIOCRSD_FIELD_SEARCH_OR_BROWSE"
+				description="COM_CIOCRSD_FIELD_SEARCH_OR_BROWSE_DESC"
+
+				default="search"
+				class="btn-group"
+				>
+				<option value="search">COM_CIOCRSD_SHOW_SEARCH</option>
+				<option value="browse">COM_CIOCRSD_SHOW_BROWSE</option>
+			</field>
+		</fieldset>
+
+		<!-- Add fields to the parameters object for the layout. -->
+
+		<fieldset name="searchoptions" label="COM_CIOCRSD_FIELD_SEARCH_OPTIONS"
+			description="COM_CIOCRSD_FIELD_SEARCH_DESC">
+
+			<field name="ciocrsd_search_ciocresults" type="radio"
+				default=""
+				class="btn-group btn-group-yesno"
+				label="COM_CIOCRSD_FIELD_CIOCRESULTS"
+			>
+				<option value="on">JYES</option>
+				<option value="">JNO</option>
+			</field>
+			<field name="ciocrsd_search_keywords" type="radio"
+				default="on"
+				class="btn-group btn-group-yesno"
+				label="COM_CIOCRSD_FIELD_KEYWORDS"
+			>
+				<option value="on">JYES</option>
+				<option value="off">JNO</option>
+			</field>
+			<field name="ciocrsd_search_agegroup" type="radio"
+				default=""
+				class="btn-group btn-group-yesno"
+				label="COM_CIOCRSD_FIELD_AGEGROUP"
+			>
+				<option value="on">JYES</option>
+				<option value="">JNO</option>
+			</field>
+			<field name="ciocrsd_search_quicklist" type="text"
+					default=""
+					label="COM_CIOCRSD_FIELD_QUICKLIST"
+					description="COM_CIOCRSD_FIELD_QUICKLIST_DESC"
+					size="20" maxlength="20"
+			/>
+
+			<field name="ciocrsd_search_community" type="radio"
+				default="on"
+				class="btn-group btn-group-yesno"
+				label="COM_CIOCRSD_FIELD_COMMUNITY"
+			>
+				<option value="on">JYES</option>
+				<option value="off">JNO</option>
+			</field>
+			<field name="ciocrsd_search_limitcmtype" type="radio"
+				default="S"
+				class="btn-group"
+				label="COM_CIOCRSD_FIELD_LIMITCMTYPE"
+			>
+				<option value="L">COM_CIOCRSD_LOCATED_IN_COMMUNITY</option>
+				<option value="S">COM_CIOCRSD_SERVING_COMMUNITY</option>
+			</field>
+			<field name="ciocrsd_search_clearbutton" type="radio"
+				default="on"
+				class="btn-group btn-group-yesno"
+				label="COM_CIOCRSD_FIELD_CLEARBUTTON"
+			>
+				<option value="on">JYES</option>
+				<option value="off">JNO</option>
+			</field>
+			<field name="ciocrsd_search_multiformid" type="text"
+				default=""
+				label="COM_CIOCRSD_FIELD_MULTIFORMID"
+				description="COM_CIOCRSD_FIELD_MULTIFORMID_DESC"
+				size="5"
+				maxlength="5" />
+
+		</fieldset>
+		<fieldset name="browseoptions" label="COM_CIOCRSD_FIELD_BROWSE_OPTIONS"
+			description="COM_CIOCRSD_FIELD_BROWSE_DESC">
+			<field name="ciocrsd_browse_ciocresults" type="radio"
+				default=""
+				class="btn-group btn-group-yesno"
+				label="COM_CIOCRSD_FIELD_CIOCRESULTS"
+			>
+				<option value="on">JYES</option>
+				<option value="">JNO</option>
+			</field>
+			<field name="ciocrsd_browse_quicklist" type="text"
+					default="DEFAULT"
+					label="COM_CIOCRSD_FIELD_QUICKLIST"
+					description="COM_CIOCRSD_FIELD_QUICKLIST_DESC"
+					size="20" maxlength="20"
+			/>
+			<field name="ciocrsd_browse_count" type="radio"
+				default="on"
+				class="btn-group btn-group-yesno"
+				label="COM_CIOCRSD_FIELD_COUNT"
+			>
+				<option value="on">JYES</option>
+				<option value="off">JNO</option>
+			</field>
+		</fieldset>
+		<fieldset name="resultsoptions" label="COM_CIOCRSD_FIELD_RESULTS_OPTIONS"
+			description="COM_CIOCRSD_FIELD_RESULTS_DESC">
+
+			<field name="ciocrsd_results_ciocdetails" type="radio"
+				default=""
+				class="btn-group btn-group-yesno"
+				label="COM_CIOCRSD_FIELD_CIOCDETAILS"
+			>
+				<option value="on">JYES</option>
+				<option value="">JNO</option>
+			</field>
+			<field name="ciocrsd_results_nolink" type="radio"
+				default=""
+				class="btn-group btn-group-yesno"
+				label="COM_CIOCRSD_FIELD_NOLINK"
+			>
+				<option value="">JYES</option>
+				<option value="on">JNO</option>
+			</field>
+			<field name="ciocrsd_results_nocount" type="radio"
+				default=""
+				class="btn-group btn-group-yesno"
+				label="COM_CIOCRSD_FIELD_NOCOUNT"
+			>
+				<option value="">JYES</option>
+				<option value="on">JNO</option>
+			</field>
+		</fieldset>
+
+	</fields>
+</metadata>

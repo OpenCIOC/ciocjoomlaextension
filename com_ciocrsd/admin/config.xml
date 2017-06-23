@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <!-- Authentication. -->
+    <fieldset name="authentication" label="COM_CIOCRSD_FIELD_AUTHENTICATION"
+        description="COM_CIOCRSD_FIELD_AUTHENTICATION_DESC">
+
+        <field name="ciocrsd_cioc_url" type="text"
+            description="COM_CIOCRSD_FIELD_URL_DESC"
+            label="COM_CIOCRSD_FIELD_URL_LABEL"
+            size="90"
+            maxlength="150"
+            required="true"
+            />
+
+
+        <field name="ciocrsd_cioc_api_id" type="text"
+            label="COM_CIOCRSD_FIELD_LABEL_API_ID"
+            size="38"
+            maxlength="38"
+            required="true"
+            />
+
+        <field name="ciocrsd_cioc_api_pw" type="text"
+            label="COM_CIOCRSD_FIELD_LABEL_API_PW"
+            size="38"
+            maxlength="38"
+            required="true"
+            />
+    </fieldset>
+
+    <!-- Advanced options. -->
+    <fieldset name="display" label="COM_CIOCRSD_FIELD_DISPLAY">
+
+        <field name="ciocrsd_has_fa" type="radio"
+            default="0"
+            class="btn-group btn-group-yesno"
+            label="COM_CIOCRSD_FIELD_HAS_FA_LABEL"
+        >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+
+        <field name="ciocrsd_add_icons"
+            type="radio"
+            class="btn-group btn-group-yesno"
+            default="1"
+            label="COM_CIOCRSD_FIELD_ADD_ICONS_LABEL"
+        >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+
+        <field name="ciocrsd_has_bootstrap"
+            type="radio"
+            class="btn-group btn-group-yesno"
+            default="1"
+            label="COM_CIOCRSD_FIELD_HAS_BOOTSTRAP_LABEL"
+        >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="ciocrsd_field_groups"
+            type="radio"
+            class="btn-group btn-group-yesno"
+            default="1"
+            label="COM_CIOCRSD_FIELD_FIELD_GROUPS_LABEL"
+        >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="ciocrsd_google_maps_key" type="text"
+            label="COM_CIOCRSD_FIELD_GOOGLE_MAPS_KEY"
+            size="90"
+            maxlength="100"
+            />
+
+    </fieldset>
+</config>

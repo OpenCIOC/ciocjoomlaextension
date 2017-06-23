@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="3.0" type="package" method="upgrade">
+    <identifier>pkg:ciocrsd</identifier>
+    <name>pkg_ciocrsd</name>
+    <packagename>ciocrsd</packagename>
+    <author>Open CIOC Project</author>
+    <creationDate>November 2016</creationDate>
+    <copyright>Copyright (C) 2016 - 2017 KCL Custom Software</copyright>
+    <license>Apache 2.0</license>
+    <authorUrl>www.opencioc.orgom</authorUrl>
+    <version>0.1.1</version>
+    <description>CIOC Remote Search and Details</description>
+
+    <files>
+        <file type="component" id="com_ciocrsd">com_ciocrsd</file>
+        <file type="module" id="mod_ciocrsd">mod_ciocrsd</file>
+        <file type="module" id="mod_ciocrsdbrowse">mod_ciocrsdbrowse</file>
+    </files>
+</extension>

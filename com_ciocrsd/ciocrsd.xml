@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.1" method="upgrade">
+	<name>com_ciocrsd</name>
+	<author>Open CIOC Project</author>
+	<creationDate>November 2016</creationDate>
+	<copyright>(C) 2016 - 2017 KCL Software Solutions. All rights reserved.
+	</copyright>
+	<license>Apache License Version 2; see LICENSE.txt</license>
+	<authorEmail>info@cioc.ca</authorEmail>
+	<authorUrl>www.opencioc.org</authorUrl>
+	<version>0.1.1</version>
+	<description>COM_CIOCRSD_XML_DESCRIPTION</description>
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>router.php</filename>
+		<filename>ciocrsd.php</filename>
+		<folder>views</folder>
+		<folder>helpers</folder>
+	</files>
+	<languages folder="site/language">
+		<language tag="en-GB">en-GB/en-GB.com_ciocrsd.ini</language>
+	</languages>
+	<administration>
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>config.xml</filename>
+			<filename>ciocrsd.php</filename>
+			<filename>controller.php</filename>
+			<folder>views</folder>
+		</files>
+		<languages folder="admin/language">
+			<language tag="en-GB">en-GB/en-GB.com_ciocrsd.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_ciocrsd.sys.ini</language>
+		</languages>
+	</administration>
+	<media destination="com_ciocrsd" folder="media">
+		<filename>index.html</filename>
+		<folder>css</folder>
+		<folder>js</folder>
+	</media>
+</extension>
