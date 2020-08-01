@@ -1036,12 +1036,17 @@ class CiocRsdHelper
 		}
 		 */
 		
-		$form_action = '';
+		$form_action = '?';
 		if ($sc_options['ciocresults']) {
-			$form_action = $this->fetch_url . '/results.asp';
+			$form_action = $this->fetch_url . '/results.asp?';
 		} elseif ($target_results) {
 			$form_action = $target_results;
-		}
+			if (strpos($form_action, '?') !== false) {
+				$form_action .= '&';
+			} else {
+				$form_action .= '?';
+			}
+		} 
 
 		$show_count = TRUE;
 		if ($sc_options['count'] === 'off') {
@@ -1142,9 +1147,12 @@ class CiocRsdHelper
 										}
 										$cat_icon = '<i class="' . $cat_icon . '" aria-hidden="true"></i>';
 									}
+
+									# NOTE: form_action could already contain parameters. Assume
+									# that it already has the correct joining item
 									$return_html .= '<li>'
 										. $cat_icon
-										. ' <a href="' . $form_action . '?dosearch=on&' . $select_name . '=' . $record_id . '">' 
+										. ' <a href="' . $form_action . 'dosearch=on&' . $select_name . '=' . $record_id . '">' 
 										. $record_row->{$quicklist_name} . '</a>' . $record_count_display . '</li>';
 								}
 							}

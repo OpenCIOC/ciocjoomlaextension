@@ -54,7 +54,7 @@ def main():
         bump_version(fname)
 
     excludes = ['*.sw?', '.DS_Store', 'updatezip.*', '*.git*', '*.zip']
-    with zipfile.ZipFile('pkg_ciocrsd.zip', 'w', zipfile.ZIP_DEFLATED) as zip:
+    with zipfile.ZipFile('../pkg_ciocrsd.zip', 'w', zipfile.ZIP_DEFLATED) as zip:
         for root, dirs, files in os.walk('.'):
             for fname in files:
                 if any(fnmatch(fname, p) for p in excludes):
