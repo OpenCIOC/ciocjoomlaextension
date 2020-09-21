@@ -9,6 +9,7 @@
 defined('_JEXEC') or die;
 
 use Joomla\Http\HttpFactory;
+use Joomla\CMS\Uri\Uri;
 
 /**
  * HelloWorld component helper.
@@ -473,6 +474,7 @@ class CiocRsdHelper
 		$fetch_headers = $this->fetch_headers;
 		$search_params = [];
 		$return_html = '';
+		$extra_hidden = array();
 	
 		if ($fetch_url && !empty($fetch_headers)) {
 			$sc_options = shortcode_atts ( array (
@@ -523,12 +525,23 @@ class CiocRsdHelper
 				if ($sc_options['ciocresults']) {
 					$form_action = $this->fetch_url . '/results.asp';
 				} elseif ($target_results) {
-					$form_action = $target_results;
+					$parts = Uri::getInstance($target_results);
+					$query = $parts->getQuery();
+					if(!empty($query)){
+						parse_str($query, $extra_hidden);
+					$form_action = $parts->toString(array('scheme', 'host', 'port', 'path'));
+					} else {
+						$form_action = $target_results;
+					}
 				}
 				
 				$return_html = '<form action="' . $form_action . '" method="GET" name="CIOCRSDSearch' . $multiform_id . '" class="form-horizontal ciocrsd-search-form">'
 						. '<input type="hidden" name="dosearch" value="on">';
 				
+				foreach($extra_hidden as $key => $value) {
+					$return_html .= '<input type="hidden" name="' . htmlspecialchars($key) . '" value="' . htmlspecialchars($value) . '">';
+				}
+
 				if ($sc_options['keywords']) {
 					$return_html .= '<div class="ciocrsd-form-input">' 
 						. $this->keyword_textbox($sc_options)
